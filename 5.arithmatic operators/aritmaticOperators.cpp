@@ -43,5 +43,30 @@ int main() {
     // because 10 divided by 3 is 3 with a remainder of 1
     std::cout << "After Modulus: " << modulus << std::endl;
 
+
+    //! parentheses can be used to group operations and change the order of evaluation
+    // for example, in the expression 2 + 3 * 4, multiplication is performed first,
+    // resulting in 2 + 12 = 14. However, if we use parentheses like this: (2 + 3) * 4,
+    // the addition is performed first, resulting in 5 * 4 = 20.
+
+    int coin = 10 - 2 * 4 / 2 + 6; 
+    std::cout << "\nWithout Parentheses: " << coin << std::endl;  // the output will be 14
+    /* 
+        !because the operations are performed in the following order:
+        a. 2 * 4 = 8
+        b. 8 / 2 = 4 (integer division)
+        c. 10 - 4 = 6
+        d. 8 + 6 = 14
+    */
+
+    int money = (10 - 2) * (4 / 2 + 6);
+    std::cout << "With Parentheses: " << money << std::endl;  // the output will be 48
+    /*
+        !because the operations are performed in the following order:
+        a. (10 - 2) = 8
+        b. (4 / 2 + 6) = (2 + 6) = 8
+        c. 8 * 8 = 64
+    */
+
     return 0;
 }
